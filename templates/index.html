@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Lazy Excuse Bot</title>
+</head>
+<body>
+    <h1>Lazy Excuse Bot</h1>
+    <form method="post">
+        <label for="category">Choose a category:</label>
+        <select name="category" id="category">
+            <option value="go to school">School</option>
+            <option value="go to work">Work</option>
+            <option value="attend an event">Social Event</option>
+            <option value="meet someone">Meeting</option>
+        </select>
+        <button type="submit">Generate Excuse</button>
+    </form>
+
+    {% if excuse %}
+    <h2>Your Lazy Excuse:</h2>
+    <p>{{ excuse }}</p>
+    {% endif %}
+</body>
+</html>
